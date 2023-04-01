@@ -1,0 +1,95 @@
+// Variables and constants
+let myVariable = "Hello, world!";
+const myConstant = 3.14;
+
+// Arrays and objects
+const myArray = [1, 2, 3];
+const myObject = { name: "John", age: 30, city: "New York" };
+
+// Functions
+function sum(a, b) {
+  return a + b;
+}
+
+const multiply = function(a, b) {
+  return a * b;
+};
+
+// Arrow functions
+const divide = (a, b) => {
+  return a / b;
+};
+
+const sayHello = name => console.log(`Hello, ${name}!`);
+
+// Conditional statements
+const x = 10;
+if (x > 0) {
+  console.log("Positive number");
+} else if (x < 0) {
+  console.log("Negative number");
+} else {
+  console.log("Zero");
+}
+
+// Loops
+for (let i = 0; i < 10; i++) {
+  console.log(i);
+}
+
+let i = 0;
+while (i < 10) {
+  console.log(i);
+  i++;
+}
+
+// Array methods
+const myNumbers = [1, 2, 3, 4, 5];
+const doubledNumbers = myNumbers.map(number => number * 2);
+const filteredNumbers = myNumbers.filter(number => number > 2);
+const sumOfNumbers = myNumbers.reduce((sum, number) => sum + number, 0);
+
+// Object methods
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  fullName: function() {
+    return `${this.firstName} ${this.lastName}`;
+  }
+};
+
+// Classes
+class Animal {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  speak() {
+    console.log(`${this.name} makes a noise.`);
+  }
+}
+
+class Dog extends Animal {
+  constructor(name, age, breed) {
+    super(name, age);
+    this.breed = breed;
+  }
+
+  speak() {
+    console.log(`${this.name} barks.`);
+  }
+}
+
+// Promises
+const fetchData = () => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("Data has been fetched.");
+    }, 2000);
+  });
+};
+
+fetchData()
+  .then(data => console.log(data))
+  .catch(error => console.log(error));
